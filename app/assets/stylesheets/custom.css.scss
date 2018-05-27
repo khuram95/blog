@@ -1,0 +1,102 @@
+$navbar-default-bg: rgb(83, 23, 56);
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "social-share-button";
+
+body{
+  background: #23074d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #cc5333, #23074d);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #cc5333, #23074d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+
+label, h1, h2{
+  color: white;
+}
+
+#logo{
+  float: left;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: white;
+}
+
+.jumbotron{
+  background: url('http://wallartpicture.com/wp-content/uploads/2017/04/Wallpapers-Best-abstract-HD-design-by-Wallart-092.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: royalblue;
+  height: 780px;
+}
+
+.jumbotron h1{
+  color: white;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-shadow: 4px 5px 4px black;
+}
+
+.footer{
+  margin: 45px;
+  padding: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777777;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+  margin-top: -20px;
+}
+
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;  
+}
+  
+.article-body {  
+  border-top: 1px solid #eaeaea;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.article-meta-info {
+  border: 1px solid #eaeaea;
+  margin-top: 15px;
+}
+
+.listing{
+  list-style: none;
+}
+
+.badge{
+  background: #cef6f5;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.input_checkbox input {
+  width: auto !important;
+}
+.center{
+  text-align: center;
+}
