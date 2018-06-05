@@ -51,7 +51,7 @@ private
   end
 
   def article_params
-    params.require(:article).permit(:title, :description, category_ids: [])
+    params.require(:article).permit(:title, :description,:url, category_ids: [], tag_ids: [])
   end
 
   def require_same_user

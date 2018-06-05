@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root 'articles#index'
   get 'about', to: 'pages#about'
   resources :articles
-  
   resources :users, except: [:new]
   
   get 'login', to:'sessions#new'
@@ -11,4 +10,5 @@ Rails.application.routes.draw do
   delete 'logout', to:'sessions#destroy'
 
   resources :categories, except: [:destroy]
+  resources :tags, except: [:destroy]
 end

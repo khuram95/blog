@@ -3,6 +3,21 @@
 <div class='row'>
     <div class='col-xs-12'>
       <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <div class="row">
+       
+      </div>
+      <div class="row">
+        <div class="col-sm-offset-2 col-sm-1 well well-sm">
+          <%if logged_in? && current_user.admin?%>
+            <li class="add_tag"><%= link_to  "Create Tag", new_tag_path %></li>
+          <%end%>          
+        </div>
+        <div class="col-sm-offset-1 col-sm-4">
+          <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |cb| %>
+          <% cb.label(class: "checkbox-inline input_checkbox"){cb.check_box(class: "checkbox")+ cb.text}%>
+          <%end%>
+        </div>
+      </div>
       <div class="form-group">
         <div class="control-label col-sm-2">
           <%= f.label :title %>
@@ -20,7 +35,15 @@
         <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Body of article" %>    
       </div>
     </div>
-    <div class="form-group"></div>
+
+    <div class="form-group">
+      <div class="control-label col-sm-2">    
+        <%= f.label :image %>    
+      </div>
+      <div class="col-sm-8">
+        <%= f.text_field :url, class: "form-control", placeholder: "image url" %>    
+      </div>     
+    </div>
     
     <div class="row">
       <div class="col-sm-offset-4 col-sm-8">
@@ -29,6 +52,8 @@
         <%end%>
       </div>
     </div>
+
+
     <div class="form-group row">
       <div class="col-sm-offset-2 col-sm-10">    
         <%= f.submit class: 'btn btn-primary btn-lg' %>

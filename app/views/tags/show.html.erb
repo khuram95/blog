@@ -1,0 +1,17 @@
+<h1 class="text-center">Tag: <%=@tag.name %></h1>
+<div class="text-center">
+  <% if logged_in? and current_user.admin? %>
+    <div class="row">
+    <span class="badge"><%= link_to "Edit Tag Name", edit_tag_path(@tag) %></span>
+    </div>
+  <% end %>
+</div>
+<div class="text-center">
+  <%= will_paginate @tag_articles %>
+</div>
+
+<%= render  "articles/article", obj: @tag_articles %>
+
+<div class="text-center">
+    <%= will_paginate @tag_articles %>
+  </div>
